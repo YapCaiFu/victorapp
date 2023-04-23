@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { OverallContainer } from "components/Common";
-import { ImageContainer, StyledToolbar, FooterIconButton, ContentText, ContentLeftText, ContentRowContainer, ContentCenterText, ContentContainer, SecondaryContent, ChartContentContainer, FooterContainer, MainImage, StyledAppBar } from './Main.Styles';
+import { StyledListItem, ImageContainer, StyledToolbar, FooterIconButton, ContentText, ContentLeftText, ContentRowContainer, ContentCenterText, ContentContainer, SecondaryContent, ChartContentContainer, FooterContainer, MainImage, StyledAppBar } from './Main.Styles';
 import { useState, useCallback, useMemo, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ListItem, ListItemText, Typography } from "@mui/material";
@@ -85,8 +85,8 @@ function Login() {
       <ContentContainer>
         <ContentCenterText isLight={uiIsLight}>Projects</ContentCenterText>
       </ContentContainer>
-      <ContentRowContainer sx={{ width: '80%', margin: 'auto' }}>
-        <ListItem alignItems="flex-start">
+      <ContentRowContainer sx={{ width: '90%', margin: 'auto' }}>
+        <StyledListItem alignItems="flex-start">
           <ListItemText
             sx={{ color: !uiIsLight ? 'white' : "#001e3c" }}
             primary="NUSmart Dining"
@@ -99,8 +99,8 @@ function Login() {
               </SecondaryContent>
             }
           />
-        </ListItem>
-        <ListItem alignItems="flex-start">
+        </StyledListItem>
+        <StyledListItem alignItems="flex-start">
           <ListItemText
             sx={{ color: !uiIsLight ? 'white' : "#001e3c" }}
             primary="Warehouse Management System for Leeden National Oxygen Ltd"
@@ -117,7 +117,7 @@ function Login() {
             </SecondaryContent>
             }
           />
-        </ListItem>
+        </StyledListItem>
       </ContentRowContainer>
       <FooterContainer isLight={uiIsLight}>Victor Yap 2023 <FooterIconButton onClick={() => rerouteToLink('https://www.linkedin.com/in/victor-yap-9b63b8174')} aria-label="linkedin">
         <LinkedInIcon sx={{ color: !uiIsLight ? 'white' : "#001e3c" }} />

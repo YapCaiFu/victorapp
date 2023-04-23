@@ -1,7 +1,7 @@
 import styled, { ThemedStyledProps } from 'styled-components';
 import Image, { ImageProps } from 'react-bootstrap/Image';
 import AppBar from '@mui/material/AppBar';
-import { IconButton, List } from '@mui/material';
+import { IconButton, List, ListItem } from '@mui/material';
 import logo from 'assets/images/victor.jpg';
 import logo_night from 'assets/images/victor_night.jpg';
 import { RefAttributes } from 'react';
@@ -56,15 +56,13 @@ export const ChartContentContainer = styled(ContentContainer).attrs(props => ({
   aspect-ratio : 1;`;
 
 export const ContentRowContainer = styled(List).attrs(props => ({
-  className: 'd-flex',
-}))`
-  min-height:50%;
-  margin: auto;`;
+  className: 'd-flex justify-content-center flex-wrap',
+}))``;
 
 
 export const SecondaryContent = styled.div.attrs(props => ({
 }))`
-  min-height: 34rem;
+  min-height: 35rem;
   background-color: rgba(255, 255, 255, 0.5);`;
 
 export const ContentCenterText = styled.div.attrs(props => ({
@@ -94,6 +92,14 @@ text-align: center;
 export const FooterIconButton = styled(IconButton).attrs(() => ({
 }))`
 padding-left: 5px!important;
+`;
+
+export const StyledListItem = styled(ListItem).attrs(() => ({
+}))`
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  @media (min-width: 768px) {  width: 50%!important; }
+  @media (max-width: 768px) {  width: 100%!important; }
 `;
 
 
