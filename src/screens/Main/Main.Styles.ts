@@ -33,9 +33,8 @@ export const MainImage = styled(Image).attrs((props: ThemedStyledProps<ImageProp
   border-radius: 50%`;
 
 export const ContentText = styled.div.attrs(props => ({
-  className: 'mb-5',
+  className: 'mb-5 pb-5',
 })) <isLightStyled>`
-  padding-bottom: 15%;
   text-align: justify;
   font-size: 17px;
   color: ${props => props.isLight ? 'rgba(0, 0, 0, 0.6)' : 'white'};`;
@@ -51,6 +50,7 @@ export const ImageContainer = styled(ContentContainer).attrs(props => ({
     margin: auto;`;
 
 export const ChartContentContainer = styled(ContentContainer).attrs(props => ({
+  className: 'mb-5',
 }))`
   aspect-ratio : 1;`;
 
