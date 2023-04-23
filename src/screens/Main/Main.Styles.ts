@@ -41,7 +41,8 @@ export const ContentText = styled.div.attrs(props => ({
 
 export const ContentContainer = styled.div.attrs(props => ({
 }))`
-  width: 50%!important;
+  @media (min-width: 768px) {  width: 50%!important;  }
+  @media (max-width: 768px) {  width: 90%!important; }
   margin: auto;`;
 
 export const ImageContainer = styled(ContentContainer).attrs(props => ({
