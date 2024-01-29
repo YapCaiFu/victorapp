@@ -63,18 +63,21 @@ function Login() {
         <PolarArea
           data={
             {
-              labels: ['React Native', 'ReactJS', 'Typescript', 'C#', 'MSSQL', 'Firebase'],
+              labels: ['React Native', 'ReactJS', 'Typescript', 'Next.js', 'Kotlin', 'C#', 'MSSQL', 'Firebase'],
               datasets: [
                 {
                   label: '',
-                  data: [10, 9, 7, 3, 5, 8],
+                  data: [10, 9, 7, 4, 4, 3, 5, 7],
                   backgroundColor: [
                     'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(220, 53, 69, 0.5)',
                     'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    // 'rgba(255, 204, 0, 0.5)',
+                    'rgba(32, 201, 151, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(153, 102, 255, 0.5)'
                   ],
                   borderWidth: 1,
                 },
