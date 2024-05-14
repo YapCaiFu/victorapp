@@ -67,7 +67,7 @@ function Login() {
               datasets: [
                 {
                   label: '',
-                  data: [10, 9, 7, 4, 4, 3, 5, 7],
+                  data: [9, 8, 7, 4, 6, 6, 7, 7],
                   backgroundColor: [
                     'rgba(255, 99, 132, 0.5)',
                     'rgba(220, 53, 69, 0.5)',
