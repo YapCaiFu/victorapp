@@ -122,7 +122,7 @@ function Login() {
           />
         </StyledListItem>
       </ContentRowContainer>
-      <FooterContainer isLight={uiIsLight}>Victor Yap 2023 <FooterIconButton onClick={() => rerouteToLink('https://www.linkedin.com/in/victor-yap-9b63b8174')} aria-label="linkedin">
+      <FooterContainer isLight={uiIsLight}>Victor Yap 2024 <FooterIconButton onClick={() => rerouteToLink('https://www.linkedin.com/in/victor-yap-9b63b8174')} aria-label="linkedin">
         <LinkedInIcon sx={{ color: !uiIsLight ? 'white' : "#001e3c" }} />
       </FooterIconButton> <FooterIconButton onClick={() => rerouteToLink('mailto:smallmoney.yap@hotmail.com')} aria-label="email">
           <EmailIcon sx={{ color: !uiIsLight ? 'white' : "#001e3c" }} />
