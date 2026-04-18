@@ -1,5 +1,86 @@
-export default {
+const english = {
   translation: {
-   
-  }
-}
+    nav: {
+      about: 'About',
+      skills: 'Skills',
+      experience: 'Experience',
+      projects: 'Projects',
+      hobbies: 'Hobbies',
+      contact: 'Contact',
+    },
+    hero: {
+      name: 'Victor Yap Cai Fu',
+      role: 'Software Specialist · Mandai Wildlife Group',
+      bio: 'Mobile-first software engineer who turns ideas into delightful user-facing experiences. I partner closely with product and design teams across the full sprint cycle, and enjoy exploring new tech — especially in mobile, mapping, and AI-assisted development — to solve real problems for real users.',
+    },
+    stats: {
+      yearsMobile: 'Years in Mobile Dev',
+      natureLover: 'Nature Lover at Heart',
+      explorer: 'Curious Explorer',
+    },
+    sections: {
+      skills: 'Skills',
+      experience: 'Experience',
+      projects: 'Projects',
+      hobbies: 'Hobbies',
+    },
+    skillCategories: {
+      mobile: 'Mobile',
+      web: 'Web',
+      maps: 'Maps & Geospatial',
+      platform: 'Platform & Tooling',
+      ai: 'AI Assistants',
+    },
+    experience: {
+      mandai: 'IT Software Specialist',
+      mandaiCompany: 'Mandai Wildlife Group',
+      mandaiPeriod: 'Aug 2024 – Present',
+      sgdatahub: 'Hybrid App Developer',
+      sgdatahubCompany: 'Sgdatahub',
+      sgdatahubPeriod: 'Mar 2022 – Jun 2024',
+      leeden: 'Software Engineer',
+      leedenCompany: 'Leeden National Oxygen Ltd',
+      leedenPeriod: 'Sep 2019 – Mar 2022',
+      ifast: 'Mobile App Developer',
+      ifastCompany: 'iFast Corporation Ltd',
+      ifastPeriod: 'Jul 2018 – Sep 2018',
+    },
+    projects: {
+      mandaiTitle: 'Mandai App',
+      mandaiDesc: 'Official mobile companion app for Mandai Wildlife Group parks. Brings park navigation, membership access, show reminders, food ordering, and interactive animal spotting into one seamless guest experience.',
+      cliteTitle: 'Clite Terminal',
+      cliteDesc: 'Android application for a portable payment terminal, enabling on-the-ground transactions across park operations.',
+      nusmartTitle: 'NUSmart Dining',
+      nusmartDesc: 'Mobile ordering app for NUS canteens. Streamlines food ordering for students and provides real-time sales and operations insights for vendors.',
+      warehouseTitle: 'Warehouse Management System',
+      warehouseDesc: 'End-to-end operations app for Leeden National Oxygen covering inventory via barcode scanning, gas container transactions, delivery orders, and integration with internal C# and SAP systems.',
+    },
+    hobbies: {
+      hiking: 'Hiking',
+      diving: 'Diving',
+      adventurous: 'Adventurous',
+      activities: {
+        nepalAbc: 'Nepal ABC',
+        yubeng: 'Lijiang Yubeng',
+        rinjani: 'Mount Rinjani',
+        kinabalu: 'Mount Kinabalu',
+        ow: 'Open Water (OW)',
+        aow: 'Advanced Open Water (AOW)',
+        ultralight: 'Ultralight Plane Flight',
+        paragliding: 'Paragliding',
+        socotra: 'Socotra, Yemen',
+      },
+    },
+    footer: {
+      copyright: 'Victor Yap',
+    },
+    contact: {
+      heading: "Let's Connect",
+      subtext: "Always open to interesting projects, ideas, and conversations.",
+      linkedin: 'LinkedIn',
+      email: 'Email me',
+    },
+  },
+};
+
+export default english;

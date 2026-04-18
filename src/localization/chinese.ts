@@ -1,5 +1,86 @@
-export default {
+const chinese = {
   translation: {
-   
+    nav: {
+      about: '关于',
+      skills: '技能',
+      experience: '经历',
+      projects: '项目',
+      hobbies: '爱好',
+      contact: '联系',
+    },
+    hero: {
+      name: '叶才福',
+      role: '软件专员 · Mandai Wildlife Group',
+      bio: '以移动端为先的软件工程师，致力于将想法转化为令人愉悦的用户体验。我在整个敏捷开发周期中与产品和设计团队紧密合作，热衷于探索新技术——尤其是移动端、地图与 AI 辅助开发——为真实用户解决真实问题。',
+    },
+    stats: {
+      yearsMobile: '年移动开发经验',
+      natureLover: '热爱大自然',
+      explorer: '好奇探索者',
+    },
+    sections: {
+      skills: '技能',
+      experience: '工作经历',
+      projects: '项目',
+      hobbies: '爱好',
+    },
+    skillCategories: {
+      mobile: '移动端',
+      web: '网页端',
+      maps: '地图与地理空间',
+      platform: '平台与工具',
+      ai: 'AI 助手',
+    },
+    experience: {
+      mandai: 'IT 软件专员',
+      mandaiCompany: 'Mandai Wildlife Group',
+      mandaiPeriod: '2024 年 8 月 – 至今',
+      sgdatahub: '混合应用开发工程师',
+      sgdatahubCompany: 'Sgdatahub',
+      sgdatahubPeriod: '2022 年 3 月 – 2024 年 6 月',
+      leeden: '软件工程师',
+      leedenCompany: 'Leeden National Oxygen Ltd',
+      leedenPeriod: '2019 年 9 月 – 2022 年 3 月',
+      ifast: '移动应用开发工程师',
+      ifastCompany: 'iFast Corporation Ltd',
+      ifastPeriod: '2018 年 7 月 – 2018 年 9 月',
+    },
+    projects: {
+      mandaiTitle: 'Mandai App',
+      mandaiDesc: 'Mandai Wildlife Group 官方移动伴游应用，将园区导航、会员登录、表演提醒、餐饮下单与动物发现融合为无缝的游客体验。',
+      cliteTitle: 'Clite Terminal',
+      cliteDesc: '便携式支付终端的 Android 应用，支持园区各项运营的现场交易。',
+      nusmartTitle: 'NUSmart Dining',
+      nusmartDesc: '新加坡国立大学食堂的移动点餐应用，为学生简化点餐流程，并为商家提供实时销售与运营洞察。',
+      warehouseTitle: '仓储管理系统',
+      warehouseDesc: '为 Leeden National Oxygen 构建的端到端运营应用，涵盖条码扫描库存管理、气瓶交易、送货单，以及与内部 C# 与 SAP 系统的集成。',
+    },
+    hobbies: {
+      hiking: '徒步',
+      diving: '潜水',
+      adventurous: '冒险',
+      activities: {
+        nepalAbc: '尼泊尔 ABC',
+        yubeng: '丽江雨崩',
+        rinjani: '林贾尼火山',
+        kinabalu: '神山 京那巴鲁',
+        ow: '开放水域 (OW)',
+        aow: '进阶开放水域 (AOW)',
+        ultralight: '超轻型飞机飞行',
+        paragliding: '滑翔伞',
+        socotra: '也门 索科特拉岛',
+      },
+    },
+    footer: {
+      copyright: '叶才福',
+    },
+    contact: {
+      heading: '联系我',
+      subtext: '欢迎分享有趣的项目、想法与交流。',
+      linkedin: '领英',
+      email: '发邮件',
+    },
   },
-}
+};
+
+export default chinese;
