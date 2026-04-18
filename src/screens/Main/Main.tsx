@@ -59,12 +59,20 @@ import {
   HeroImageSide,
   HeroTextSide,
   HeroBio,
+  MobileMenuButton,
+  MobileDrawerContent,
+  MobileDrawerHeader,
+  MobileDrawerCloseButton,
+  MobileNavLink,
+  MobileDrawerFooter,
 } from './Main.Styles';
 import { memo, useEffect, useRef, useState } from 'react';
-import { Chip, Typography } from "@mui/material";
+import { Chip, Drawer, Typography } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import MainSwitch from "components/MainSwitch/MainSwitch";
 import { uiIsLightSelector } from "redux/ui/selector";
 import { useAppSelector } from "redux/store";
@@ -300,6 +308,7 @@ function Login() {
   const currentYear = new Date().getFullYear();
   const progress = useScrollProgress();
   const [showTop, setShowTop] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const { ref: statsRef, inView: statsInView } = useInView<HTMLDivElement>(0.3);
 
   useEffect(() => {
@@ -318,9 +327,19 @@ function Login() {
 
       <StyledAppBar sx={{ bgcolor: uiIsLight ? 'white' : "#0c1538", color: !uiIsLight ? 'white' : "rgba(0, 0, 0, 0.6)", backdropFilter: 'blur(10px)' }}>
         <AppBarInner>
-          <Typography variant="h5" component="div" sx={{ display: 'flex', alignItems: 'center' }}>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: { xs: '17px', sm: '24px' },
+              whiteSpace: 'nowrap',
+              minWidth: 0,
+            }}
+          >
             <MainSwitch
-              sx={{ m: 1 }}
+              sx={{ mx: { xs: 0, sm: 1 }, my: 1 }}
               defaultChecked
               onChange={() => dispatch(setIsLight(!uiIsLight))}
               isLight={uiIsLight}
@@ -338,8 +357,57 @@ function Login() {
               {i18n.language === 'zh' ? 'EN' : '中文'}
             </LangToggleButton>
           </NavLinksContainer>
+          <MobileMenuButton
+            isLight={uiIsLight}
+            onClick={() => setMobileOpen(true)}
+            aria-label="open menu"
+          >
+            <MenuIcon />
+          </MobileMenuButton>
         </AppBarInner>
       </StyledAppBar>
+
+      <Drawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+        PaperProps={{ sx: { bgcolor: uiIsLight ? 'white' : '#0c1538' } }}
+      >
+        <MobileDrawerContent isLight={uiIsLight}>
+          <MobileDrawerHeader isLight={uiIsLight}>
+            <span>{t('hero.name')}</span>
+            <MobileDrawerCloseButton
+              isLight={uiIsLight}
+              onClick={() => setMobileOpen(false)}
+              aria-label="close menu"
+            >
+              <CloseIcon fontSize="small" />
+            </MobileDrawerCloseButton>
+          </MobileDrawerHeader>
+          {NAV_LINKS.map((link) => (
+            <MobileNavLink
+              key={link.id}
+              href={`#${link.id}`}
+              isLight={uiIsLight}
+              onClick={() => setMobileOpen(false)}
+            >
+              {t(link.labelKey)}
+            </MobileNavLink>
+          ))}
+          <MobileDrawerFooter isLight={uiIsLight}>
+            <LangToggleButton
+              isLight={uiIsLight}
+              onClick={() => {
+                toggleLang();
+                setMobileOpen(false);
+              }}
+              aria-label="toggle language"
+            >
+              {i18n.language === 'zh' ? 'EN' : '中文'}
+            </LangToggleButton>
+          </MobileDrawerFooter>
+        </MobileDrawerContent>
+      </Drawer>
       <StyledToolbar />
 
       <section id="about">

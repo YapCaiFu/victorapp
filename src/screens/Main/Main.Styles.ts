@@ -50,6 +50,7 @@ export const ProfileImageWrapper = styled.div.attrs(props => ({})) <isLightStyle
   @media (max-width: 640px) {
     width: 180px;
     height: 180px;
+    margin: 0 auto;
   }
 `;
 
@@ -176,7 +177,8 @@ export const HeroNameText = styled.div.attrs(props => ({})) <isLightStyled>`
   background-clip: text;
 
   @media (max-width: 640px) {
-    font-size: 36px;
+    font-size: clamp(24px, 8.5vw, 34px);
+    white-space: nowrap;
   }
 `;
 
@@ -358,6 +360,87 @@ export const NavLinksContainer = styled.div.attrs(props => ({}))`
   }
 `;
 
+export const MobileMenuButton = styled.button.attrs(props => ({})) <isLightStyled>`
+  display: none;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: ${props => props.isLight ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.85)'};
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: ${props => props.isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.08)'};
+  }
+
+  @media (max-width: 640px) {
+    display: inline-flex;
+  }
+`;
+
+export const MobileDrawerContent = styled.div.attrs(props => ({})) <isLightStyled>`
+  width: 260px;
+  height: 100%;
+  background: ${props => props.isLight ? 'white' : '#0c1538'};
+  color: ${props => props.isLight ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.9)'};
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+`;
+
+export const MobileDrawerHeader = styled.div.attrs(props => ({})) <isLightStyled>`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.25rem 0.75rem;
+  border-bottom: 1px solid ${props => props.isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.1)'};
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 15px;
+`;
+
+export const MobileDrawerCloseButton = styled.button.attrs(props => ({})) <isLightStyled>`
+  background: transparent;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+  color: ${props => props.isLight ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.8)'};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: ${props => props.isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.08)'};
+  }
+`;
+
+export const MobileNavLink = styled.a.attrs(props => ({})) <isLightStyled>`
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: ${props => props.isLight ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.9)'};
+  padding: 0.75rem 0.75rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: ${props => props.isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.08)'};
+  }
+`;
+
+export const MobileDrawerFooter = styled.div.attrs(props => ({})) <isLightStyled>`
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid ${props => props.isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.1)'};
+`;
+
 export const NavLink = styled.a.attrs(props => ({})) <isLightStyled>`
   font-size: 14px;
   font-weight: 500;
@@ -391,6 +474,10 @@ export const AppBarInner = styled.div.attrs(props => ({}))`
   align-items: center;
   width: 100%;
   gap: 1rem;
+
+  @media (max-width: 640px) {
+    gap: 0.25rem;
+  }
 `;
 
 export const BackToTopButton = styled(IconButton).attrs(() => ({})) <isLightStyled & { visible: boolean }>`
@@ -895,6 +982,12 @@ export const HeroLayout = styled.div.attrs(props => ({}))`
   max-width: 1280px;
   margin: 2rem auto 3rem;
   padding: 2rem 1rem;
+
+  @media (max-width: 640px) {
+    gap: 1rem;
+    margin: 0.5rem auto 1.5rem;
+    padding: 0.75rem 1rem 1rem;
+  }
 
   @media (min-width: 900px) {
     flex-direction: row;
